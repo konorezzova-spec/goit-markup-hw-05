@@ -15,7 +15,6 @@ a {
 }
 ul, li {
     list-style-type: none;
-    display: inline;
     margin: 0;
     padding-left: 0;
 }
@@ -421,6 +420,8 @@ p {
 .footer-form-container {
     display: flex;
     gap: 24px;
+    width: 453px;
+
 }
 .footer-form-button {
     display: flex;
@@ -432,26 +433,36 @@ p {
     height: 40px;
     background-color: #4D5AE5;
     color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-button:hover,
 .footer-form-button:focus {
     background-color: #31D0AA;
 }
 .footer-form-input {
+    outline: none;
     font-family: inherit;
     border: 1px solid #FFFFFF;
     border-radius: 4px;
-    width: 264px;
+    max-width: 264px;
     height: 40px;
     padding-left: 16px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: transparent;
+
+    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-input::placeholder {
     color: #FFFFFF;
     font-weight: 400;
     font-size: 12px;
-    line-height: 2px;
+    line-height: 2;
     letter-spacing: 0.04em;
 }
 .footer-form-input:hover,
@@ -465,7 +476,7 @@ p {
 
 /* #region Modal Section */
 .modal-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(46, 47, 66, 0.4);
 
     position: fixed;
     top: 0;
@@ -479,11 +490,13 @@ p {
 
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
     transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay.is-open {
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
 }
 .modal {
     border-radius: 4px;
@@ -543,11 +556,13 @@ p {
 }
 .input {
     font-family: inherit;
-    border: 1px solid #8E8F99;
+    outline: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     width: 360px;
     height: 40px;
     padding-left: 36px;
+
 
     transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -562,9 +577,6 @@ p {
     transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .modal-label:focus-within {
-    color: #4D5AE5;
-} */
 .modal-label:focus-within .modal-icon {
     fill: #4D5AE5;
 }
@@ -574,34 +586,63 @@ p {
 
 .textarea-comment {
     color: #2E2F42;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     resize: none;
-    border: 1px solid #8E8F99;
+    outline: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+    height: 120px;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+
+    transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textarea-comment::placeholder {
-    color: #8E8F99;
+    color: rgba(46, 47, 66, 0.4);
 }
-.textarea-comment:focus {
+.textarea-comment:focus-within {
     border-color: #4D5AE5;
 }
 .agreement {
     flex-direction: row;
     align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    margin-bottom: 24px;
 }
-.checkbox-agreement {
-    color: inherit;
-    width: 16px;
+
+.checkbox-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 16px;
+    width: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    border: 1px solid #8E8F99;
+    background-color: #F4F4FD;
+
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-agreement:checked {
+.checkbox-icon {
+    fill: #F4F4FD;
+}
+
+.custom-checkbox:checked + .checkbox-icon-box {
     background-color: #404BBF;
     border-color: #404BBF;
 }
+
 .link-policy {
     color: #4D5AE5;
-    text-decoration: underline
+    text-decoration: underline;
+    line-height: 1.33;
 }
 .modal-button {
     border: none;
@@ -619,6 +660,8 @@ p {
     display: block;
     margin: 0 auto;
     text-align: center;
+
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:hover,
 .modal-button:focus,

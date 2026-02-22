@@ -507,7 +507,7 @@ p {
     max-height: 584px;
     overflow-y: auto;
 }
-.clouse-modal {
+.close-modal {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -436,6 +436,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    cursor: pointer;
     border-radius: 4px;
     width: 165px;
     height: 40px;
@@ -572,6 +573,10 @@ p {
 
     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.input-wrapper {
+    position: relative;
+}
 .input {
     font-family: inherit;
     font-weight: 400;
@@ -587,12 +592,7 @@ p {
     height: 40px;
     padding: 8px 0 8px 38px;
     
-    transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-wrapper {
-    position: relative;
-    
+    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon {
     position: absolute;
@@ -607,7 +607,7 @@ p {
 .modal-label:focus-within .modal-icon {
     fill: #4D5AE5;
 }
-.input:focus-within {
+.input:focus {
     border: 1px solid #4D5AE5;
 }
 
@@ -625,7 +625,7 @@ p {
     height: 120px;
     padding: 8px 16px;
 
-    transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textarea-comment::placeholder {
     color: rgba(46, 47, 66, 0.4);
@@ -679,6 +679,7 @@ p {
 }
 .modal-button {
     border: none;
+    cursor: pointer;
     border-radius: 4px;
     padding: 16px 32px;
     width: 169px;   

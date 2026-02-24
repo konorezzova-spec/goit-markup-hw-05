@@ -207,6 +207,7 @@ p {
 /* #region Features Section*/
 
 .features-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }

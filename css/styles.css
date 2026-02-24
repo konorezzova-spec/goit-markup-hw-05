@@ -241,6 +241,7 @@ p {
     background-color: #F4F4FD;
 }
 .team-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 72px;
@@ -296,6 +297,7 @@ p {
 
 /* #region Portfolio Section*/
 .portfolio-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 72px;

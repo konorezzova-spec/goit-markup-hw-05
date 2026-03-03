@@ -371,7 +371,7 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.1667;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     margin-left: 0;
     margin-right: 0;
@@ -423,12 +423,12 @@ p {
     background-color: #31D0AA;
 }  
 
-.footer-form {
+.footer-form-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.footer-form-container {
+.footer-form {
     display: flex;
     gap: 24px;
     width: 453px;

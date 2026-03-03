@@ -701,8 +701,7 @@ p {
     transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:hover,
-.modal-button:focus,
-.modal-button:active {
+.modal-button:focus {
     background-color: #404BBF;
 }
 /* #endregion Modal Section */
